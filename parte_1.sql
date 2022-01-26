@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS kopas(
 	id BIGSERIAL CONSTRAINT pk_kopas PRIMARY KEY,
 	selecao VARCHAR(128) NOT NULL UNIQUE ,
 	qnt_copas INTEGER
-)
+);
 
 INSERT INTO 
 	kopas(selecao, qnt_copas)
