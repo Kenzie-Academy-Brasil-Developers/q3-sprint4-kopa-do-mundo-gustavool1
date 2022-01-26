@@ -17,7 +17,7 @@ VALUES
 ('Espanha', 1),
 ('Japão', 1);
 
-
+SELECT selecao, qnt_copas FROM kopas;
 UPDATE kopas SET qnt_copas = 4 WHERE selecao = 'Alemanha'  RETURNING * ;
 DELETE FROM kopas WHERE selecao = 'Japão' RETURNING * ;
 SELECT * FROM kopas ; 
