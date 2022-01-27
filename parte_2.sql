@@ -1,4 +1,12 @@
 ALTER TABLE kopas ADD COLUMN pts INTEGER
+UPDATE kopas SET pts = 237 WHERE selecao LIKE 'Brasil';
+UPDATE kopas SET pts = 221 WHERE selecao LIKE 'Alemanha';
+UPDATE kopas SET pts = 156 WHERE selecao LIKE 'Itália';
+UPDATE kopas SET pts = 144 WHERE selecao LIKE 'Argentina';
+UPDATE kopas SET pts = 115 WHERE selecao LIKE 'França';
+UPDATE kopas SET pts = 84  WHERE selecao LIKE 'Uruguai';
+UPDATE kopas SET pts = 108 WHERE selecao LIKE 'Inglaterra';
+UPDATE kopas SET pts = 105 WHERE selecao LIKE 'Espanha';
 CREATE TABLE IF NOT EXISTS estadios(
 	id BIGSERIAL CONSTRAINT pk_estadios PRIMARY KEY,
 	edicao TEXT,
@@ -32,7 +40,8 @@ VALUES
 ('XIX','2010','Soccer City','Joanesburgo',84490),
 ('XX','2014','Estádio do Maracanã','Rio de Janeiro',74738),
 ('XXI','2018','Estádio Lujniki','Moscou',78011);
-SELECT * FROM estadios 	;
+SELECT * FROM estadios ;
+SELECT * FROM estadios where publico_pagante > 100000;
 SELECT * FROM estadios WHERE  publico_pagante > 50000 AND publico_pagante < 100000;
 SELECT * FROM estadios WHERE estadio LIKE  '%y' ;
 ALTER TABLE 
